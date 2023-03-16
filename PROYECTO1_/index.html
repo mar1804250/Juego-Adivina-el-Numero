@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Juego de adivinanzas </title>
+    
+
+    <style> 
+    html{
+        font-family: sans-serif;
+        box-sizing: border-box;
+
+    }
+
+    h1{
+        color: rgb(234, 255, 0);
+        font-size: 50px;
+        text-align: center;
+    }
+
+    p{
+        color: white;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .form{
+        color: rgb(255, 0, 140);
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    body{
+        width: 50%;
+        max-width: 800px;
+        min-width: 450px;
+        margin: 0 auto;
+        background-image: url("img/a1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .form input [type="number"]{
+        width: 200px;
+    }
+
+    .btn_probar_num{
+    background-color: #a0d1f7;
+    border: none;
+    font-size: 0.9rem;
+    font-family: Arial;
+    padding: 0.9rem;
+    }
+    .campo_num{
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    }
+    img{
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 2rem;
+    }
+
+    .ultimoResult{
+        color: rgb(5, 1, 1);
+        padding: 5px;
+    }
+
+    .btnReset{
+        background-color: blue;
+        font-size: 1rem;
+    }
+
+    .intentos{
+        font-size: 1.6rem;
+        color: rgb(112, 255, 241);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1> Adivina el numero </h1>
+
+    <p>
+        Hemos seleccionado un número al azar entre 1 y 100. A ver si eres capaz de adivinarlo en 10 turnos o menos. Te diremos si has acertado demasiado o demasiado poco. 
+    </p>
+    <img src="img/1.jpg" alt="imagen">
+
+    <div class="form">
+        <label for="campo_num"> Introduzca un numero</label>
+        <input type="number" min="1" max="100" required id="campo_num" class="campo_num">
+        <input type="submit" value="Provar numero" class="btn_probar_num">
+    </div>
+
+    <div class="intentos">
+        <div id="display-resultado" style="height: 20px;"> </div>
+    </div>
+
+    <div class="div_result">
+        <p class="num_ingresados"></p>
+        <p class="ultimoResult"></p>
+        <p class="pistas"></p>
+    </div>
+
+
+
+</body>
+<script src="script/main.js"> </script>
+</html>
